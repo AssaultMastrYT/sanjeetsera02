@@ -1,0 +1,38 @@
+{% extends 'Home.html' %}
+
+{% block ForNav %}
+
+<div class="container">
+
+        <form class="row" method="POST" action="/activedataentry/" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-sm-12 col-md-3 col-4-lg py-2">
+                        <label class="col-form-label">Upload Active Emplployees File</label>
+                </div>
+                <div class="col-sm-12 col-md-3 col-4-lg py-2">
+                        <input type="file" class="form-control" id="activeEmployees" name="activeEmployees" required>
+                </div>
+                <div class="col-sm-12 col-md-3 col-4-lg py-2">
+                        <button type="submit" class="btn btn-primary mb-3 px-2">Check Status</button>
+                </div>
+        </form>
+
+        <div>
+                <h5>
+                        <div class="alert alert-primary" role="alert">
+                                Total Data : {{data_count}}
+                        </div>
+                </h5>
+        </div>
+
+        <form method="POST" action="/activedataentry/delete/">
+                {% csrf_token %}
+                <div class="d-grid gap-2">
+                        <button class="btn btn-outline-danger" type="submit">Delete All Data</button>
+                </div>
+        </form>
+
+</div>
+
+
+{% endblock %}
