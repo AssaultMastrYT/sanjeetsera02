@@ -11,8 +11,7 @@ client = MongoClient("mongodb+srv://sanjityaya:Sanjeet111@cluster0.gbw3x.mongodb
 
 
 def home(request):
-    response = requests.get('https://gorest.co.in/public/v2/users').json()
-    return render(request, 'Home.html', {'response': response})
+    return render(request, 'Home.html')
 
 
 def ActiveDataEntry(request):

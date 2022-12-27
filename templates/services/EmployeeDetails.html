@@ -1,0 +1,35 @@
+{% extends 'Home.html' %}
+
+{% block ForNav %}
+
+<!-- Search Block -->
+<div class="container">
+    {% csrf_token %}
+    <form class="row g-3 py-2" method="GET" action="/services/employeedetails">
+        <div class="col-auto">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Search Employee">
+        </div>
+        <div class="col-auto">
+          <input type="text" class="form-control" id="searchEmployee" name="searchEmployee" placeholder="Enter Here" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-info mb-3 px-4">Search</button>
+        </div>
+      </form>
+
+</div>
+
+<!-- Inquire Block -->
+<div class="container">
+
+    <!-- {% for i in employee%} -->
+    <h3>
+        Result: {{employee}}
+    </h3>
+    <!-- {% endfor%} -->
+
+
+</div>
+
+
+{% endblock %}
