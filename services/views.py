@@ -5,7 +5,7 @@ import requests
 from pymongo import MongoClient
 
 #Creating Client
-client = MongoClient("mongodb+srv://sanjityaya:Sanjeet111@cluster0.gbw3x.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://********:********@cluster0.gbw3x.mongodb.net/?retryWrites=true&w=majority")
 
 
 def EmployeeDetails(request):
